@@ -22,7 +22,7 @@ class Category(models.Model):
     update_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        self.title
+        return self.title
 
 
 class Product(models.Model):
@@ -40,13 +40,13 @@ class Product(models.Model):
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
     detail = RichTextField()
-    minamount = models.ImageField()
-    amout = models.IntegerField()
-    price = models.FloatField
+    minamount = models.IntegerField()
+    amount = models.IntegerField()
+    price = models.FloatField()
 
 
     def __str__(self):
-         self.title
+         return self.title
 
 
     def image_tag(self):
@@ -61,4 +61,4 @@ class Images(models.Model):
     image = models.ImageField(blank=True, upload_to='images/products/images/')
 
     def __str__(self):
-        self.title
+        return self.title
